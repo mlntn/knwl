@@ -59,25 +59,13 @@ class Phone extends Plugin {
            a phone number */
         if (strlen($currWord) >= 7 + $this->area_code_length) {
           $results[] = [
-            'number' => $this->format($currWord)
+            'number' => $currWord
           ];
         }
       }
     }
 
     return $results;
-  }
-
-  protected function format($number) {
-    $l = $this->area_code_length + 7;
-    
-    $formatted = '(' . substr($number, -$l, -7) . ') ' . substr($number, -7, -4) . '-' . substr($number, -4);
-
-    if (strlen($number) > $l) {
-      $formatted = '+' . substr($number, 0, -$l) . ' ' . $formatted;
-    }
-
-    return $formatted;
   }
 
 }
