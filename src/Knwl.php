@@ -45,7 +45,7 @@ class Knwl {
   public function get($parser) {
     if (array_key_exists($parser, $this->plugins)) {
       try {
-        return $this->plugins[$parser]->calls(func_get_args());
+        return $this->plugins[$parser]->calls();
       }
       catch (\Exception $e) {
         throw new PluginException("Error running parser plugin '{$parser}'");

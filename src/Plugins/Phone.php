@@ -14,7 +14,7 @@ class Phone extends Plugin {
 
   protected $area_code_length = 3;
 
-  public function calls(...$args) {
+  public function calls() {
     $results = [];
 
     $words = $this->knwl->getWords('words');

@@ -99,7 +99,7 @@ class Bible extends Plugin {
     $this->books = $books;
   }
 
-  public function calls(...$args) {
+  public function calls() {
     $matches = [];
     $words   = $this->knwl->getWords('linkWordsCasesensitive');
     foreach ($words as $i => $w) {

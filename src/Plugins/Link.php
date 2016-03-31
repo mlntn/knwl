@@ -12,19 +12,17 @@ class Link extends Plugin {
 
   protected $name = 'link';
 
-  public function calls(...$args) {
+  public function calls() {
     $results = [ ];
+    
     $words   = $this->knwl->getWords('linkWords');
 
     foreach ($words as $i => $w) {
       $word = preg_replace('~[ \(\)!]~', '', $w);
-      if (preg_match('~^(https?|ftp):\/\/(-\.)?([^\s\/?\.#-]+\.?)+(\/[^\s]*)?$~i', $word)) {
-        $link = $word;
-        if (preg_match('~[?.!,]$~', $link)) {
-          $link = substr($link, 0, -1);
-        }
+      if ($match = filter_var($word, FILTER_VALIDATE_URL)) {
+        $match = preg_replace('~[?.!,]$~', '', $match);
         $results[] = [
-          'address' => $link,
+          'address' => $match,
         ];
       }
     }

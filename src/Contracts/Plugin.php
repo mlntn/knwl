@@ -14,6 +14,6 @@ interface Plugin {
    */
   public function getName();
 
-  public function calls(...$args);
+  public function calls();
 
 }

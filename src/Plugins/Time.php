@@ -14,7 +14,7 @@ class Time extends Plugin {
 
   protected $times = [ ];
 
-  public function calls(...$args) {
+  public function calls() {
     $words = $this->knwl->getWords('words');
 
     foreach ($words as $i => $w) {
