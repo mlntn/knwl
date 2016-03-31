@@ -4,13 +4,13 @@ namespace Knwl\Plugins;
 
 use Knwl\Abstracts\Plugin;
 
-class Link extends Plugin {
+class Url extends Plugin {
 
   protected $languages = [
     'english',
   ];
 
-  protected $name = 'link';
+  protected $name = 'url';
 
   public function calls() {
     $results = [ ];
