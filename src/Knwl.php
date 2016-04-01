@@ -3,7 +3,7 @@
 namespace Knwl;
 
 
-use Knwl\Contracts\Plugin;
+use Knwl\Abstracts\Plugin;
 use Knwl\Exceptions\PluginException;
 
 class Knwl {
@@ -140,6 +140,8 @@ class Knwl {
     if (array_key_exists($type, $this->words)) {
       return $this->words[$type];
     }
+
+    return [];
   }
 
   /**
