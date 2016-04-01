@@ -21,7 +21,7 @@ class Knwl {
    */
   protected $plugins = [ ];
 
-  public function __construct($str) {
+  public function parse($str) {
     $lowercase              = strtolower($str);
     $linkWords              = $lowercase = preg_split('~[ \n]+~', $lowercase);
     $linkWordsCaseSensitive = preg_split('~[ \n]+~', $str);
