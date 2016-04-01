@@ -22,9 +22,7 @@ class Email extends Plugin {
       foreach ($word as $j=>$l) {
         $temp = preg_replace('~[()!,]~', '', $l);
         if ($match = filter_var($temp, FILTER_VALIDATE_EMAIL)) {
-          $results[] = [
-            'address' => $match,
-          ];
+          $results[] = $match;
         }
       }
     }

@@ -58,9 +58,7 @@ class Phone extends Plugin {
            not at least 7 digits plus the areaCodeLength in the currWord then it is not likely
            a phone number */
         if (strlen($currWord) >= 7 + $this->area_code_length) {
-          $results[] = [
-            'number' => $currWord
-          ];
+          $results[] = $currWord;
         }
       }
     }

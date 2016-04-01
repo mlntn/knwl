@@ -110,9 +110,7 @@ class Bible extends Plugin {
         foreach ($this->books as $books) {
           foreach ($books as $b) {
             if ($b->check($r, $w)) {
-              $matches[] = [
-                'passage' => $b->get() . ' ' . $w,
-              ];
+              $matches[] = $b->get() . ' ' . $w;
             }
           }
         }

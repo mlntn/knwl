@@ -68,12 +68,7 @@ class Time extends Plugin {
   }
 
   protected function add($hour, $minute, $meridian) {
-    $this->times[] = [
-      'hour'     => $hour,
-      'minute'   => $minute,
-      'meridian' => $meridian,
-      'full'     => "{$hour}:{$minute}{$meridian}",
-    ];
+    $this->times[] = "{$hour}:{$minute}{$meridian}";
   }
 
 }

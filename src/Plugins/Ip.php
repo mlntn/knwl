@@ -19,9 +19,7 @@ class Ip extends Plugin {
 
     foreach ($words as $i => $w) {
       if ($match = filter_var($w, FILTER_VALIDATE_IP)) {
-        $results[] = [
-          'address' => $match,
-        ];
+        $results[] = $match;
       }
     }
 

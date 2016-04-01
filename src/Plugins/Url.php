@@ -21,9 +21,7 @@ class Url extends Plugin {
       $word = preg_replace('~[ \(\)!]~', '', $w);
       if ($match = filter_var($word, FILTER_VALIDATE_URL)) {
         $match = preg_replace('~[?.!,]$~', '', $match);
-        $results[] = [
-          'address' => $match,
-        ];
+        $results[] = $match;
       }
     }
 
