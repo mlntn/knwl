@@ -10,6 +10,7 @@ class PhoneTest extends Base {
 
     $this->assertContains('2123231239', $this->knwl->get('phone'));
     $this->assertContains('18005674321', $this->knwl->get('phone'));
+    $this->assertContains('8008888888888', $this->knwl->get('phone'));
   }
 
 }

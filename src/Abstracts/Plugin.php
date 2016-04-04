@@ -13,12 +13,10 @@ abstract class Plugin implements PluginContract {
    */
   protected $knwl;
 
+  protected $name;
+
   public function setKnwl(Knwl $knwl) {
     $this->knwl = $knwl;
-  }
-
-  public function getLanguages() {
-    return $this->languages;
   }
 
   public function getName() {
