@@ -18,6 +18,7 @@ class Ip extends Plugin {
     $words   = $this->knwl->getWords('linkWords');
 
     foreach ($words as $i => $w) {
+      $w = preg_replace('~(^\D|\D$)~', '', $w);
       if ($match = filter_var($w, FILTER_VALIDATE_IP)) {
         $results[] = $match;
       }
